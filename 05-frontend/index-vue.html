@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vue.js Example</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+  </head>
+
+  <body>
+    <h1>Vue.js Example</h1>
+
+    <div id="app">
+      {{ message }}
+      <ul v-if="airports && airports.length">
+        <li v-for="airport of airports"><strong>{{ airport.name }}</strong> (IATA code: {{ airport.iata_code }})</li>
+      </ul>
+    
+      <ul v-if="errors && errors.length">
+        <li v-for="error of errors">{{ error.message }}</li>
+      </ul>
+    </div>
+
+    <script src="vue/app.js"></script>
+  </body>
+</html>

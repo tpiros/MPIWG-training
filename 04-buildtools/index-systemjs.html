@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SystemJS Example</title>
+
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- <script src="systemjs.config.js"></script> -->
+    <script>
+      SystemJS.config({
+        map: {
+          'plugin-babel': 'node_modules/systemjs-plugin-babel/plugin-babel.js',
+          'systemjs-babel-build': 'node_modules/systemjs-plugin-babel/systemjs-babel-browser.js'
+        },
+        transpiler: 'plugin-babel'
+      });
+      SystemJS
+        .import('./systemjs/es2015.js')
+        .then(function(module) {
+          var myCar = new module.car();
+          console.log(myCar.speed);
+          myCar.increaseSpeed();
+          myCar.increaseSpeed(10);
+          console.log(myCar.speed);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+    </script>
+  </head>
+
+  <body>
+    <h1>SystemJS Example</h1>
+  </body>
+</html>

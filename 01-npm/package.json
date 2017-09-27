@@ -1,0 +1,18 @@
+{
+  "name": "01-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo starting",
+    "runMe": "node -e 'console.log(\"hello from Node.js\")'"
+  },
+  "author": "Tamas Piros",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "winston": "^2.3.1"
+  }
+}

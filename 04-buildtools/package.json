@@ -1,0 +1,25 @@
+{
+  "name": "04-buildtools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamas Piros",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-minify": "^1.0.0",
+    "lodash": "^4.17.4",
+    "systemjs": "^0.20.18"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "systemjs-plugin-babel": "0.0.25"
+  }
+}
